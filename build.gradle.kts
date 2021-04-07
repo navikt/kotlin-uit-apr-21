@@ -1,12 +1,9 @@
-import org.gradle.api.tasks.testing.logging.TestExceptionFormat.FULL
-import org.jetbrains.kotlin.gradle.tasks.*
+import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 group = "no.nav"
 
-val junitJupiterVersion = "5.6.0"
-
 plugins {
-   kotlin("jvm") version "1.4.10"
+   kotlin("jvm") version "1.4.32"
 }
 
 repositories {
@@ -16,31 +13,18 @@ repositories {
 dependencies {
    implementation(platform("org.jetbrains.kotlin:kotlin-bom"))
    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
-
-   testImplementation("org.junit.jupiter:junit-jupiter-api:$junitJupiterVersion")
-   testImplementation("org.junit.jupiter:junit-jupiter-params:$junitJupiterVersion")
-   testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:$junitJupiterVersion")
-
 }
 
 java {
-   sourceCompatibility = JavaVersion.VERSION_14
-   targetCompatibility = JavaVersion.VERSION_14
+   sourceCompatibility = JavaVersion.VERSION_15
+   targetCompatibility = JavaVersion.VERSION_15
 }
 
 tasks.withType<KotlinCompile> {
-   kotlinOptions.jvmTarget = "14"
-}
-
-tasks.withType<Test> {
-   useJUnitPlatform()
-   testLogging {
-      events("passed", "skipped", "failed")
-      exceptionFormat = FULL
-   }
+   kotlinOptions.jvmTarget = "15"
 }
 
 tasks.withType<Wrapper> {
-   gradleVersion = "6.7"
+   gradleVersion = "6.8.3"
 }
 
