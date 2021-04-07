@@ -22,7 +22,7 @@ fun main() {
    }
 }
 
-class MessageBoard() {
+class MessageBoard {
    private val msgs = mutableListOf<String>()
 
    fun addMessage(msg: String) = msgs.add(msg)
