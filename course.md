@@ -56,6 +56,11 @@
 - Brukes i funksjonen som en hvilken som helst annen verdi
 - Dersom lambdauttrykket er eneste eller siste parameter til funksjonen, kan dette uttrykket løftes ut av funksjonskallet og legges i `{}` bak kallet
 
+### Java interoperabilitet
+- Du kan blande sammen Java og Kotlin, enten i samme fil eller forskjellige filer
+- Husk at Java ikke har et konsept om null
+- IntelliJ kan oversette Java til Kotlin.
+
 ## Koans
 - Et sett oppgaver ment til å gi en innføring i Kotlin
 - Oppgavene kan løses på to måter
