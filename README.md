@@ -1,3 +1,3 @@
-## kotlin-ntnu-nov-20
+## kotlin-uit-apr-21
 
-Example code for Kotlin demo @ NTNU
+Example code and presentation for Kotlin demo @ UiT

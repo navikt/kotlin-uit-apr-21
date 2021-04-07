@@ -3,7 +3,7 @@ package no.nav
 import java.math.BigDecimal
 
 fun main() {
-   println("ntnu".shout())
+   println("uit".shout())
    println(25.dollars())
    println(4 isTwiceAsMuchAs 2)
 }
