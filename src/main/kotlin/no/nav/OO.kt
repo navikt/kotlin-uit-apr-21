@@ -1,8 +1,8 @@
 package no.nav
 
 fun main() {
-   val address = Address("Storgata", 22)
-   val per = Person("Per", address)
+   val address = KotlinAddress("Storgata", 22)
+   val per = KotlinPerson("Per", address)
    per.printMe()
    val otherPersonAtSameAddress = per.copy(name = "NotPer")
    otherPersonAtSameAddress.printMe()
@@ -14,11 +14,11 @@ fun main() {
 
 class RegularClass(val member: String)
 
-data class Person(private val name: String, private val address: Address) {
+data class KotlinPerson(private val name: String, private val address: KotlinAddress) {
    fun printMe() = println("$name lives at $address")
 }
 
-data class Address(val street: String, val houseNumber: Int)
+data class KotlinAddress(val street: String, val houseNumber: Int)
 
 open class Shape(name: String) {
 
