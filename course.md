@@ -61,7 +61,7 @@
 - Husk at Java ikke har et konsept om null
 - IntelliJ kan oversette Java til Kotlin.
 
-### Exceptions
+### Exceptions (Exceptions.kt)
 - Kotlin bruker ikke checked exceptions
 - Du trenger ikke bruke try-catch i Kotlin kode
 - Kjør kode der utfallet kan være feil i `runCatching`
