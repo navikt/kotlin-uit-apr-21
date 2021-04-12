@@ -7,8 +7,8 @@ fun main() {
    println(doStuffWithNumbers(2, 3, ::add))            // function reference
    println(adder()(2, 3))
    println(multiplier(2, 3))
-   withManyArgsAndDefault(first = "one")
-   withManyArgsAndDefault(first = "one", second = "overridden")
+   withDefaultArg(first = "one")
+   withDefaultArg(first = "one", second = "overridden")
 }
 
 fun basicFunction() = listOf("one", "two", "three")
@@ -21,5 +21,5 @@ fun adder() = { x: Int, y: Int -> x + y }
 
 val multiplier = { x: Int, y: Int -> x * y }
 
-fun withManyArgsAndDefault(first: String, second: String = "two") =
+fun withDefaultArg(first: String, second: String = "two") =
    println("$first $second")
