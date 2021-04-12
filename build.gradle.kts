@@ -21,7 +21,10 @@ java {
 }
 
 tasks.withType<KotlinCompile> {
-   kotlinOptions.jvmTarget = "15"
+   kotlinOptions {
+      jvmTarget = "15"
+      freeCompilerArgs += "-Xallow-result-return-type"
+   }
 }
 
 tasks.withType<Wrapper> {
