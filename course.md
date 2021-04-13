@@ -10,10 +10,11 @@
 
 ### Main (HelloWorld.kt)
 - En enkeltstående mainfunskjon nok til å kjøre
+- Funksjoner er "first class citizens", trenger ikke å henge fast i en klasse
 - Trenger ikke ta imot kommandolinjeparameter, men kan
 
 ### Typer (Types.kt)
-- Kotlin skiller på typer
+- Kotlin er "sterkt typet"
   - Immutable - kan ikke endres, bruker `val`
   - Mutable - kan endres, bruker `var`
   - Immutable er default og det man vil bruke mest mulig
@@ -29,19 +30,19 @@
 - Single expression statement: Trenger da ikke krøllparenteser
 - Kan ta imot funksjoner som parametre (mer om lamba senere)
 - Extension functions, legg på dine egne metoder på objekt
-- Kjøre en kodeblokk med en gitt kontekst der verdien som sendes inn er lokalt tilgjengelig (scoped function)
+- Kjøre en kodeblokk med en gitt kontekst der verdien som sendes inn er lokalt tilgjengelig ("scope functions")
 
 ### Klasser og objekter (OO.kt)
 - Klasser kan ha en default constructor som parametre rett til klassen
 - Data classes
-  - Autogenerere getters og setters
+  - Autogenerere getters, setters, toString() og equals()
   - Enkel kopiering der man kan endre deler av objektet
   - Kan også ha metoder
 - Arv, på samme måte som i Java, men med litt annen syntaks
 - Det reserverte ordet `new` brukes ikke
 
 ### Strings (Strings.kt)
-- Tripple quote - string over mange linjer med formattering
+- Triple quote - string over mange linjer med formattering
 - Template strings - putt variabler/uttrykk rett inn i String
 
 ### Null (Nulls.kt)
@@ -57,14 +58,14 @@
 - Dersom lambdauttrykket er eneste eller siste parameter til funksjonen, kan dette uttrykket løftes ut av funksjonskallet og legges i `{}` bak kallet
 
 ### Java interoperabilitet (ConvertFromJava.kt, JavaInterop.kt)
-- Du kan blande sammen Java og Kotlin, enten i samme fil eller forskjellige filer
-- Husk at Java ikke har et konsept om null
+- Du kan blande sammen Java og Kotlin i samme prosjekt.
+- Husk at Java ikke er null-sikkert
 - IntelliJ kan oversette Java til Kotlin.
 
 ### Exceptions (Exceptions.kt)
 - Kotlin bruker ikke checked exceptions
-- Du trenger ikke bruke try-catch i Kotlin kode
-- Kjør kode der utfallet kan være feil i `runCatching`
+- Du kan (men trenger ikke å bruke) try-catch i Kotlin kode
+- Kan bruke den mere funksjonelt inspirerte `runCatching`
 
 ## Koans
 - Et sett oppgaver ment til å gi en innføring i Kotlin
