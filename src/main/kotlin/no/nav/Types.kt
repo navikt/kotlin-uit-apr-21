@@ -1,6 +1,5 @@
 package no.nav
 
-@ExperimentalUnsignedTypes
 fun main() {
    val immutableString: String = "hello"
    var mutableString = "hello again"
