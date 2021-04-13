@@ -32,6 +32,11 @@
 - Extension functions, legg på dine egne metoder på objekt
 - Kjøre en kodeblokk med en gitt kontekst der verdien som sendes inn er lokalt tilgjengelig ("scope functions")
 
+### Lambda (Functions.kt, Collections.kt)
+- Funksjon som parameter til en annen funksjon
+- Brukes i funksjonen som en hvilken som helst annen verdi
+- Dersom lambdauttrykket er eneste eller siste parameter til funksjonen, kan dette uttrykket løftes ut av funksjonskallet og legges i `{}` bak kallet
+
 ### Klasser og objekter (OO.kt)
 - Klasser kan ha en default constructor som parametre rett til klassen
 - Data classes
@@ -51,11 +56,6 @@
 - Trygge null-referanser (`?.`) - hvis ett av leddene er null, blir uttrykket null
 - Angi en alternativ verdi - Elvis-operator (`?:`)
 - Det er mulig å bruke `!!` for å overstyre null-sjekk, men det frarådes på det sterkeste
-
-### Lambda (Functions.kt, Collections.kt)
-- Funksjon som parameter til en annen funksjon
-- Brukes i funksjonen som en hvilken som helst annen verdi
-- Dersom lambdauttrykket er eneste eller siste parameter til funksjonen, kan dette uttrykket løftes ut av funksjonskallet og legges i `{}` bak kallet
 
 ### Java interoperabilitet (ConvertFromJava.kt, JavaInterop.kt)
 - Du kan blande sammen Java og Kotlin i samme prosjekt.
