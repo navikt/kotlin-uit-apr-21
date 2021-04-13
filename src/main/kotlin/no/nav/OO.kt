@@ -21,7 +21,6 @@ data class KotlinPerson(private val name: String, private val address: KotlinAdd
 data class KotlinAddress(val street: String, val houseNumber: Int)
 
 open class Shape(name: String) {
-
    init {
        println("initialising $name")
    }
