@@ -20,7 +20,8 @@ fun functionalStyle() = runCatching { mayGoHorriblyWrong() } // still experiment
 fun main() {
    tryCatch()
    functionalStyle()
-      .map { println("Gikk fint: $it") }
+      .map { it  * 2 }
+      .onSuccess { println("Dobla resultatet til: $it") }
       .onFailure { println("Det tryna jo hardt: $it") }
    yolo()
 }
